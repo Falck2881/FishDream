@@ -1,0 +1,10 @@
+﻿
+.background-mainpage-img {
+    margin-left: -35px;
+    margin-top: -20px;
+    position: absolute;
+    height: 100%;
+    background-image: url(../logo/background-fish.png);
+    z-index: -1;
+    width: 100%;
+}

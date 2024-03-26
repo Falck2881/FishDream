@@ -1,0 +1,50 @@
+﻿<div class="card-scroll-feed-recipe">
+    <div class="scroll-bar-recipes">
+        <table>
+            <tbody>
+                <tr class="row-scroll-bar-recipe">
+                    @foreach (var recipe in FoundRecipes)
+                    {
+                        <td class="item-scroll-bar-recipe">
+                            <div class="description-recipe-in-table">
+                                <img class="img-scroll-bar-recipe" src="@recipe.Path" />
+                                <table class="table-recipes">
+                                    <thead>
+                                    <th class="header-recipe">@recipe.Name</th>
+                                    </thead>
+                                    <tbody class="table-recipes">
+                                        <tr>
+                                            <td class="subheader-recipe">Тип Блюда:</td>
+                                            <td>@recipe.TypeBlude</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subheader-recipe">Описание:</td>
+                                            <td>@recipe.Description</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subheader-recipe">Время:</td>
+                                            <td>@recipe.Time мин.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subheader-recipe">Ингредиенты:</td>
+                                            <td>@GetAllIngredients(recipe)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public List<Recipe> FoundRecipes { get; set; } = null!;
+
+    [Parameter]
+    public Func<Recipe, string> GetAllIngredients { get; set; } = null!;
+}

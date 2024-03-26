@@ -1,0 +1,18 @@
+﻿.description-recipe-in-table
+{
+    display: flex;
+}
+
+.header-recipe{
+    padding-left: 180px;
+}
+
+.subheader-recipe {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-recipes{
+    display: table;
+}

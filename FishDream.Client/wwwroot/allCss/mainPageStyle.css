@@ -1,0 +1,160 @@
+﻿.title-main-page {
+    margin-left: 40%;
+    color: #229aaa;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    width: unset;
+    float: none;
+}
+
+.img-scroll-bar-recipe {
+    width: 30%;
+    height: 45%;
+    margin: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #4aabb8;
+    border-radius: 4px;
+    border-width: 4px;
+}
+
+.card-for-input-recipe {
+    display: inline-block;
+    padding: 50px 10px 50px 10px;
+    border-radius: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #cfe8ef;
+    opacity: 90%;
+    background: #e4f1f4;
+    width: 70%;
+    height: 200px;
+}
+
+.margin-card-for-input-recipe-start {
+    margin-left: 14%;
+    margin-top: 20%;
+    height: auto;
+}
+
+.margin-card-for-input-recipe-end{
+    margin-left: 14%;
+    margin-top: 12%;
+    height: 200px;
+}
+
+.dropdown-name-recipe {
+    overflow-y: auto;
+    background: white;
+    width: 80%;
+    max-height: 200px;
+    padding: 5px 5px 5px 5px;
+}
+
+.card-scroll-feed-recipe {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #cfe8ef;
+    opacity: 90%;
+    background: #e4f1f4;
+    width: 1100px;
+    margin-left: 14%;
+    margin-top: 2%;
+}
+
+.scroll-bar-recipes {
+    overflow-x: auto;
+}
+
+.row-scroll-bar-recipe{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+
+.item-scroll-bar-recipe {
+    border-style: solid;
+    border-color: #37a3b1;
+    height: 260px;
+    width: 800px;
+    border-width: 3px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.row-found-name-recipe {
+    border-bottom-style: solid;
+    border-bottom-color: #5ab1bd;
+    border-bottom-width: 1px;
+    width: 950px;
+}
+
+.row-found-name-recipe:hover{
+    background-color: #d5e6e8;
+    cursor: pointer;
+}
+
+.row-found-name-recipe:active{
+    background-color: #37a3b1;
+    cursor: pointer;
+}
+
+.block-mainpage-find-input {
+    display: flex;
+}
+
+.main-find-input {
+    width: 80%;
+    height: 50px;
+    padding-right: 30px;
+    margin-right: 3%;
+    caret-color: #4aabb8;
+    border-radius: 2px;
+    border: solid;
+    border-color: #4aabb8;
+    font-size: 25px;
+}
+
+.back-color-main-page-input {
+    background-color: #a4bac1;
+}
+
+.main-find-input:focus-visible{
+    outline: 2px solid #db6d1d;
+    border: unset;
+}
+
+.main-find-button {
+    width: 50px;
+    height: 50px;
+    border: solid;
+    background: #37a3b1;
+    border-radius: 6px;
+    border-color: #37a3b1;
+    margin-left: 2%;
+}
+
+.main-find-button:hover{
+    border-color: #8fcbd3;
+    background: #8fcbd3;
+}
+
+.main-find-button:active
+{
+    background: #db7d2e;
+    border-color: #db7d2e;
+}
+
+.loop-search {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E");
+}
+
+.fish-loading-gif {
+    display: table;
+    margin-left: 45%;
+    margin-top: 15px;
+    margin-bottom: -30px;
+}
+
+

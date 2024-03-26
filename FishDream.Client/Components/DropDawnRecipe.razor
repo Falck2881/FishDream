@@ -1,0 +1,20 @@
+﻿<div class="dropdown-name-recipe">
+    <table>
+        <tbody>
+            @foreach (var name in RecipeNames)
+            {
+                <tr>
+                    <td class="row-found-name-recipe" @onclick="@(_=> ConfirmSelection(name))">@name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter]
+    public List<string> RecipeNames { get; set; } = null!;
+
+    [Parameter]
+    public Action<string> ConfirmSelection { get; set; } = null!;
+}
