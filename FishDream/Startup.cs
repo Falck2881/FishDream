@@ -2,6 +2,7 @@
 using FishDream.Helpers;
 using FishDream.Sources;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FishDream
 {
@@ -17,6 +18,8 @@ namespace FishDream
             services.AddDbContext<CookingContext>(ConfigurationContextOptionBuilder);
             services.AddRazorComponents().
                 AddInteractiveWebAssemblyComponents();
+            // !!! Конфигурируем обработку пересылаемых заголовков запросов
+            services.Configure<ForwardedHeadersOptions>(ConfigureHelper.ConfiguringProcessingForwardedRequestHeaders);
 
         }
 
@@ -42,7 +45,8 @@ namespace FishDream
             app.UseRouting();
 
             app.UseHttpsRedirection();
-
+            // !!! Добавляем в конвеер обработки HTTP-запроса компонент работы с пересылаемыми заголовками
+            app.UseForwardedHeaders();
             app.UseStaticFiles();
             app.UseAntiforgery();
 

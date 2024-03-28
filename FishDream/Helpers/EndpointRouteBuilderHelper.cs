@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FishDream.Helpers
 {
-    static class EndpointRouteBuilderHelper
+    public static class EndpointRouteBuilderHelper
     {
         public static IEndpointRouteBuilder AddBlazorRender(this IEndpointRouteBuilder endpoint) 
         {
