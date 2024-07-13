@@ -1,8 +1,5 @@
-﻿using FishDream.Components;
-using FishDream.Helpers;
-using FishDream.Sources;
+﻿using FishDream.Helpers;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace FishDream
 {
@@ -56,12 +53,17 @@ namespace FishDream
         private static void ConfigurationContextOptionBuilder(DbContextOptionsBuilder contextOptionBuilder)
         {
             var configBuilder = new ConfigurationBuilder();
+            //- Устанавливает базовый путь для конфигурации в текущий рабочий каталог приложения.
             configBuilder.SetBasePath(Directory.GetCurrentDirectory());
+            // - Добавляет файл конфигурации appsettings.json, который содержит параметры подключения и другие настройки приложения.
             configBuilder.AddJsonFile("appsettings.json");
-
+            
+            //- Строит конфигурацию и создает объект IConfiguration, который содержит все параметры из конфигурационных файлов и других источников.
             var config = configBuilder.Build();
+            //  - Получает строку подключения к базе данных из конфигурации под именем "DefaultConnection
             var connectionString = config.GetConnectionString("DefaultConnection");
      
+            //- Настраивает контекст базы данных для использования PostgreSQL в качестве базы данных, используя строку подключения
             contextOptionBuilder.UseNpgsql(connectionString); ;
         }
 
