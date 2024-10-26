@@ -41,7 +41,8 @@ namespace FishDream
 
             app.UseRouting();
 
-            app.UseHttpsRedirection();
+            // Использовать когда только будет SSL сертификат 
+            // app.UseHttpsRedirection();
             // !!! Добавляем в конвеер обработки HTTP-запроса компонент работы с пересылаемыми заголовками
             app.UseForwardedHeaders();
             app.UseStaticFiles();
